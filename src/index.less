@@ -1,0 +1,142 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  background-color: #eee;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  z-index: 1;
+  display: block;
+}
+
+.title {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1em;
+}
+
+.captcha {
+  height: 60px;
+  margin: 1em 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .images {
+    white-space: nowrap;
+    img {
+      height: 53px;
+    }
+  }
+  .watermark {
+    pointer-events: none;
+    opacity: 0.4;
+    margin-top: -20px;
+    text-align: center;
+    .text {
+      font-size: 1.4em;
+      color: #aaab;
+    }
+	}
+	&.captcha-a, &.captcha-c {
+		height: 80px;
+		.images {
+			img {
+				height: 65px;
+			}
+	  }
+	}
+	&.captcha-b {
+		    img {
+      height: 53px;
+    }
+		}
+}
+
+.captcha-input {
+  text-align: center;
+  a {
+    cursor: pointer;
+  }
+  input {
+    text-align: center;
+  }
+}
+
+.result {
+  font-size: 1.1em;
+  .label {
+    font-size: 1.1em;
+    color: #888;
+    font-weight: bold;
+    padding-right: 2em;
+  }
+  .value {
+    color: #666;
+    &.incorrect {
+      color: #c9302c;
+    }
+    &.correct {
+      color: #5cb85c;
+    }
+  }
+}
+
+@media screen and (min-width: 280px) {
+  .captcha {
+    transform: scale(0.5);
+		&.captcha-a, &.captcha-c {
+			transform: scale(1.2);
+		}
+	}
+}
+
+@media screen and (min-width: 350px) {
+  .captcha {
+		transform: scale(0.7);
+		&.captcha-a, &.captcha-c {
+			transform: scale(1.2);
+		}
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .captcha {
+    transform: scale(0.8);
+		&.captcha-a, &.captcha-c {
+			transform: scale(1.2);
+		}
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .captcha {
+    transform: scale(0.9);
+		&.captcha-a, &.captcha-c {
+			transform: scale(1.2);
+		}
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .captcha {
+    transform: scale(1);
+		&.captcha-a, &.captcha-c {
+			transform: scale(1.2);
+		}
+  }
+}

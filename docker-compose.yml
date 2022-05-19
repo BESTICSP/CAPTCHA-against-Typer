@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  mongo:
+    image: mongo:3
+  hicaptcha:
+    build:
+        context: .
+    depends_on:
+      - mongo
+    environment:
+      - MONGO=mongodb://mongo/hicaptcha
+    ports:
+      - ${PORT:-80}:80
