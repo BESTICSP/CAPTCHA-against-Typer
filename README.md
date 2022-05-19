@@ -11,3 +11,13 @@ Install MangoDB, node.js
 
 yarn dev
 
+
+MIT license
+
+Programmer: Jianyi Zhang
+
+Email: zjy@besti.edu.cn
+
+arXiv
+
+北京电子科技学院CSP实验室
